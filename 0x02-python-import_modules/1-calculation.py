@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-import sys
-argc = ((len(sys.argv))-1)
-print(argc, end='')
-if argc == 0:
-    print(' arguments.')
-elif argc == 1:
-    print(' argument:')
-else:
-    print(' arguments:')
-for cnt, arg in enumerate(sys.argv):
-    if cnt == 0:
-        continue
-    else:
-        print(f'{str(cnt).rstrip()}: {arg}')
+from calculator_1.py import add, sub, mul, div
+
+a = 10
+b = 5
+
+print('{:d} + {:d} = {:d}'.format(a, b, add(a, b)))
+print('{:d} - {:d} = {:d}'.format(a, b, sub(a, b)))
+print('{:d} * {:d} = {:d}'.format(a, b, mul(a, b)))
+print('{:d} / {:d} = {:d}'.format(a, b, int(div(a, b))))
