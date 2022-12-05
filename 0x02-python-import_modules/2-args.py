@@ -5,9 +5,9 @@ import sys
 def main(*argv):
     cnt = 0
     argc = len(sys.argv) - 1
-    if l == 1:
+    if argc == 1:
         print("{:d} argument:".format(argc))
-    elif l == 0:
+    elif argc == 0:
         print("{:d} arguments.".format(argc))
     else:
         print("{:d} arguments:".format(argc))
