@@ -1,16 +1,20 @@
 #!/usr/bin/python3
-from sys import argv
-if __name__ == '__main__'
-	argc = ((len(argv))-1)
-	print(argc, end='')
-	if argc == 0:
-		print(' arguments.')
-	elif argc == 1:
-		print(' argument:')
+import sys
+
+
+def main(*argv):
+	i = 0
+	l = len(sys.argv) - 1
+	if l == 1:
+		print("{:d} argument:".format(l))
+	elif l == 0:
+		print("{:d} arguments.".format(l))
 	else:
-		print(' arguments:')
-	for cnt, arg in enumerate(argv):
-		if cnt == 0:
-			continue
-		else:
-			print(f'{str(cnt).rstrip()}: {arg}')
+		print("{:d} arguments:".format(l))
+	for args in sys.argv:
+		if (i != 0):
+			print("{}: {}".format(i, args))
+		i += 1
+
+if __name__ == "__main__":
+	main()
