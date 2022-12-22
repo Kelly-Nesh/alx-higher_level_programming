@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 4-square.py
+# 102-square.py
 # Brennan D Baraban <375@holbertonschool.com>
 """Define a class Square."""
 
@@ -31,3 +31,27 @@ class Square:
     def area(self):
         """Return the current area of the square."""
         return (self.__size * self.__size)
+
+    def __eq__(self, other):
+        """Define the == comparision to a Square."""
+        return self.area() == other.area()
+
+    def __ne__(self, other):
+        """Define the != comparison to a Square."""
+        return self.area() != other.area()
+
+    def __lt__(self, other):
+        """Define the < comparison to a Square."""
+        return self.area() < other.area()
+
+    def __le__(self, other):
+        """Define the <= comparison to a Square."""
+        return self.area() <= other.area()
+
+    def __gt__(self, other):
+        """Define the > comparison to a Square."""
+        return self.area() > other.area()
+
+    def __ge__(self, other):
+        """Define the >= compmarison to a Square."""
+        return self.area() >= other.area()
