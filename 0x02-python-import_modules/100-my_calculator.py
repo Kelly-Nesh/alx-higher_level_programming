@@ -19,7 +19,7 @@ def main():
     elif op == '-':
         print("{} {} {} = {}".format(a, op, b, sub(a, b)))
     else:
-        print("Unkown operator. Available operators: {}, {}, {} and {}"
+        print("Unknown operator. Available operators: {}, {}, {} and {}"
               .format(ops[0], ops[1], ops[2], ops[3]))
         exit(1)
 
