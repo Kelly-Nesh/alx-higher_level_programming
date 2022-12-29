@@ -1,21 +1,11 @@
 #!/usr/bin/python3
-import sys
-
-
-def main(*argv):
-    cnt = 0
-    argc = len(sys.argv) - 1
-    if argc == 1:
-        print("{:d} argument:".format(argc))
-    elif argc == 0:
-        print("{:d} arguments.".format(argc))
-    else:
-        print("{:d} arguments:".format(argc))
-    for arg in sys.argv:
-        if (cnt != 0):
-            print("{}: {}".format(cnt, arg))
-        cnt += 1
-
-
-if __name__ == "__main__":
-    main()
+from sys import argv
+argc = len(argv)-1
+if argc == 0:
+    print("{} arguments.".format(argc))
+elif argc == 1:
+    print("{} argument:\n{}: {}".format(argc, argc, argv[argc]))
+else:
+    print("{} arguments:".format(argc))
+    for arg in range(1, argc+1):
+        print("{}: {}".format(arg, argv[arg]))
