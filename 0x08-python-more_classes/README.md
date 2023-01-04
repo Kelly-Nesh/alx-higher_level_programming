@@ -1,1 +1,4 @@
-0-rectangle.py*  README.md
+0-rectangle.py*
+main.py*
+__pycache__/
+README.md
