@@ -1,4 +1,4 @@
-#!/usr/bn/python3
+#!/usr/bin/python3
 """Module with a function that prints a matrix of integers."""
 
 
