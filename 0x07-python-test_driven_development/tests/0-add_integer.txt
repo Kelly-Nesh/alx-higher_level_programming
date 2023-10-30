@@ -14,7 +14,9 @@ Adding integers or floats with the function
     98
 
     >>> p(2,'4')
-    6
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
     >>> print(add_integer(2))
     100
 
