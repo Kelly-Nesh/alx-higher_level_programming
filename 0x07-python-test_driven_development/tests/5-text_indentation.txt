@@ -1,0 +1,43 @@
+===============================
+Test for 5-text_indentation.py
+===============================
+
+python doctest
+
+prototype def text_indentation(text):
+prints a text with 2 new lines after each of these characters: ., ? and :
+    
+    >>> text_indentation = __import__('5-text_indentation').text_indentation #doctest: +NORMALIZE_WHITESPACE
+    >>> text_indentation("""Lorem ipsum? dolor sit am:et, consectetur adipiscing elit. """)
+    Lorem ipsum?
+    <BLANKLINE> 
+    dolor sit am:
+    <BLANKLINE> 
+    et, consectetur adipiscing elit.
+    <BLANKLINE>
+    >>> text_indentation("""Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? """)
+    Quonam modo?
+    <BLANKLINE>
+    Utrum igitur tibi litteram videor an totas paginas commovere?
+    <BLANKLINE>
+    >>> text_indentation("""234235234423!""")
+    234235234423!
+    >>> text_indentation(234234123412£$!£"$0953452£$%"£45"£$)
+    Traceback (most recent call last):
+    SyntaxError: invalid decimal literal
+    >>> text_indentation("""2?7456^%"£423$%&$%""")
+    2?
+    <BLANKLINE>
+    7456^%"£423$%&$%
+    >>> text_indentation(9987)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+    >>> text_indentation("?.::")
+    ?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
