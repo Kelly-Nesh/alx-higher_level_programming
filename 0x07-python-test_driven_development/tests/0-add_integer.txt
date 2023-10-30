@@ -13,6 +13,8 @@ Adding integers or floats with the function
     >>> print(add_integer(100, -2))
     98
 
+    >>> p(2,'4')
+    6
     >>> print(add_integer(2))
     100
 
