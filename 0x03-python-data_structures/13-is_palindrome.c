@@ -17,21 +17,21 @@ int is_palindrome(listint_t **head)
 	if (!(*head))
 		return (1);
 	temp = *head;
-	while (temp!= NULL)
-    {
-        temp = temp->next;
-        n++;
-    }
+	while (temp != NULL)
+	{
+		temp = temp->next;
+		n++;
 	temp = *head;
 	int arr[n];
+
 	j = n;
 	n = 0;
-	while (temp!= NULL)
-    {
+	while (temp != NULL)
+	{
 		arr[n] = temp->n;
-        temp = temp->next;
-        n++;
-    }
+		temp = temp->next;
+	n++;
+	}
 	n--;
 	for (i = 0; i < j; i++)
 	{
