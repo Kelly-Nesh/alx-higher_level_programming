@@ -15,12 +15,15 @@ int is_palindrome(listint_t **head)
 	int i, j, n = 0;
 
 	if (!(*head))
+	{
 		return (1);
+	}
 	temp = *head;
 	while (temp != NULL)
 	{
 		temp = temp->next;
 		n++;
+	}
 	temp = *head;
 	int arr[n];
 
