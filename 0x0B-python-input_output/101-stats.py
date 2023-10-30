@@ -9,11 +9,12 @@ def print_stats(size, status_codes):
 
     Total file size: File size: <total size>
     where is the sum of all previous (see input format above)
-    Number of lines by status code: 
+    Number of lines by status code:
     """
     print("File size: {}".format(size))
     for key in sorted(status_codes):
         print("{}: {}".format(key, status_codes[key]))
+
 
 if __name__ == "__main__":
     import sys
