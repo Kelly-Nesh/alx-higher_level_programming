@@ -24,7 +24,7 @@ class Rectangle:
         """Set the width of the current rectangle
             depending on type and value
         """
-        if not isinstance(width, (int)):
+        if not isinstance(width, int):
             raise TypeError('width must be an integer')
         elif width < 0:
             raise ValueError('width must be >= 0')
@@ -40,7 +40,7 @@ class Rectangle:
         """Set the height of the current rectangle
             depending on type and value
         """
-        if not isinstance(height, (int)):
+        if not isinstance(height, int):
             raise TypeError('height must be an integer')
         elif height < 0:
             raise ValueError('height must be >= 0')
