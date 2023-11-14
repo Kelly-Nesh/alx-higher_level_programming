@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "#!/usr/bin/node" > $1;
+chmod a+x $1;
+vi $1;
+semistandard --fix $1
