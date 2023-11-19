@@ -12,6 +12,12 @@ Base = declarative_base()
 
 
 class State(Base):
+    """Represents a state for a MySQL database.
+
+    __tablename__ (str): The name of the MySQL table to store States.
+    id (Integer): The state's id.
+    name (String): The state's name.
+    """
     __tablename__ = "states"
     id = Column(Integer, Sequence('states_id_seq'), primary_key=True)
     name = Column(String(128), nullable=False)
