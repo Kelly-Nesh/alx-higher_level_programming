@@ -12,10 +12,14 @@ if __name__ == "__main__":
 
     cur = db.cursor()
     cur.execute("""SELECT cities.name FROM cities where cities.state_id=(
-            SELECT id from states where name='{}') ORDER BY(cities.id) ASC""".format(sys.argv[4]))
+            SELECT id from states where name='{}')
+            ORDER BY(cities.id) ASC""".format(sys.argv[4]))
     cities = cur.fetchall()
-    for idx, city in enumerate(cities):
-        if idx != len(cities) - 1:
-            print(city[0], end=', ')
-        else:
-            print(city[0])
+    if not cities:
+        print()
+    else:
+        for idx, city in enumerate(cities):
+            if idx != len(cities) - 1:
+                print(city[0], end=', ')
+            else:
+                print(city[0])
