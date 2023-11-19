@@ -8,14 +8,14 @@ from sqlalchemy import Column, Integer, String, Sequence, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 import sys
 
+Base = declarative_base()
 if __name__ == "__main__":
-    Base = declarative_base()
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
 
-class State(Base):
-    __tablename__ = "states"
-    id = Column(Integer, Sequence('states_id_seq'), primary_key=True)
-    name = Column(String(128), nullable=False)
+    class State(Base):
+        __tablename__ = "states"
+        id = Column(Integer, Sequence('states_id_seq'), primary_key=True)
+        name = Column(String(128), nullable=False)
