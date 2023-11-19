@@ -17,6 +17,6 @@ if __name__ == "__main__":
     states = query.all()
     if states:
         for state in states:
-            print("{}\n{}".format(state.name, state.id))
+            print("{}".format(state.id))
     else:
         print("Not found")
