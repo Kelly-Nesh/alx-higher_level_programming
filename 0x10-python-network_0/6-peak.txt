@@ -1,0 +1,2 @@
+"""6-peak.py complexity"""
+O(nlog(n))
