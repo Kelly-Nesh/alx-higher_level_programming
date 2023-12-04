@@ -1,2 +1,2 @@
 """6-peak.py complexity"""
-O(n)
+O(n2)
