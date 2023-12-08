@@ -5,7 +5,7 @@ import urllib.request as rq
 
 if __name__ == "__main__":
     req = rq.Request("https://alx-intranet.hbtn.io/status")
-    with rq.urlopen(request) as response:
+    with rq.urlopen(req) as response:
         body = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(body)))
